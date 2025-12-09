@@ -3,18 +3,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "set NODE_OPTIONS=--import ./instrument.server.mjs && vite dev --port 3000",
+    "dev": "vite dev --port 3000",
     "build": "vite build && cp instrument.server.mjs .output/server",
     "preview": "vite preview",
     "test": "vitest run",
-    "format": "biome format",
+    "format": "biome format --write .",
     "lint": "biome lint",
-    "check": "biome check",
+    "check": "biome check --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "start": "node --import ./.output/server/instrument.server.mjs .output/server/index.mjs"
   },
   "dependencies": {
+    "@base-ui-components/react": "1.0.0-rc.0",
     "@sentry/tanstackstart-react": "^10.22.0",
     "@storybook/react-vite": "^9.1.9",
     "@tailwindcss/vite": "^4.0.6",
