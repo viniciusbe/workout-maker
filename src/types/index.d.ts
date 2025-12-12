@@ -7,7 +7,14 @@ type Exercise = {
 };
 
 type WorkoutDay = {
-	day: string;
+	day:
+		| "MONDAY"
+		| "TUESDAY"
+		| "WEDNESDAY"
+		| "THURSDAY"
+		| "FRIDAY"
+		| "SATURDAY"
+		| "SUNDAY";
 	exercises: Exercise[];
 };
 
