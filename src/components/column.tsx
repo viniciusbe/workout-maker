@@ -17,7 +17,7 @@ export function Column({ children, id }: ColumnProps) {
 
 	return (
 		<div
-			className=" rounded-lg border flex flex-1 flex-col items-center text-amber-100 p-5"
+			className="rounded-lg border flex flex-1 flex-col items-center text-amber-100 p-3 gap-3"
 			ref={ref}
 		>
 			{children}

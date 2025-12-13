@@ -18,6 +18,7 @@
     "@base-ui-components/react": "1.0.0-rc.0",
     "@dnd-kit/abstract": "^0.1.21",
     "@dnd-kit/collision": "^0.1.21",
+    "@dnd-kit/helpers": "^0.1.21",
     "@dnd-kit/react": "^0.1.21",
     "@sentry/tanstackstart-react": "^10.22.0",
     "@storybook/react-vite": "^9.1.9",
