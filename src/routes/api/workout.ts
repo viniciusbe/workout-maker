@@ -1,52 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const workoutApi = [
+export const workoutApi: WeeklyPlan = [
 	{
-		id: "Monday",
-		items: [
-			{ id: 1, name: "bench press", sets: 3, reps: 10, rest: 60 },
-			{ id: 2, name: "incline dumbbell press", sets: 3, reps: 12, rest: 60 },
-			{ id: 3, name: "triceps pushdown", sets: 3, reps: 12, rest: 45 },
+		day: "MONDAY",
+		exercises: [
+			{ id: "bench_press", name: "bench press", sets: 3 },
+			{ id: "incline_dumbbell_press", name: "incline dumbbell press", sets: 3 },
+			{ id: "triceps_pushdown", name: "triceps pushdown", sets: 3 },
 		],
 	},
 	{
-		id: "Tuesday",
-		items: [
-			{ id: 4, name: "squat", sets: 4, reps: 8, rest: 90 },
-			{ id: 5, name: "leg press", sets: 3, reps: 12, rest: 75 },
-			{ id: 6, name: "leg curl", sets: 3, reps: 12, rest: 60 },
+		day: "TUESDAY",
+		exercises: [
+			{ id: "squat", name: "squat", sets: 4 },
+			{ id: "leg_press", name: "leg press", sets: 3 },
+			{ id: "leg_curl", name: "leg curl", sets: 3 },
 		],
 	},
 	{
-		id: "Thursday",
-		items: [
-			{ id: 7, name: "pull up", sets: 3, reps: 8, rest: 75 },
-			{ id: 8, name: "barbell row", sets: 3, reps: 10, rest: 75 },
-			{ id: 9, name: "biceps curl", sets: 3, reps: 12, rest: 45 },
+		day: "THURSDAY",
+		exercises: [
+			{ id: "pull_up", name: "pull up", sets: 3 },
+			{ id: "barbell_row", name: "barbell row", sets: 3 },
+			{ id: "biceps_curl", name: "biceps curl", sets: 3 },
 		],
 	},
 	{
-		id: "Friday",
-		items: [
-			{ id: 10, name: "shoulder press", sets: 3, reps: 10, rest: 60 },
-			{ id: 11, name: "lateral raise", sets: 3, reps: 15, rest: 45 },
-			{ id: 12, name: "front raise", sets: 3, reps: 12, rest: 45 },
+		day: "FRIDAY",
+		exercises: [
+			{ id: "shoulder_press", name: "shoulder press", sets: 3 },
+			{ id: "lateral_raise", name: "lateral raise", sets: 3 },
+			{ id: "front_raise", name: "front raise", sets: 3 },
 		],
 	},
 	{
-		id: "Saturday",
-		items: [
-			{ id: 13, name: "romanian deadlift", sets: 3, reps: 10, rest: 90 },
-			{ id: 14, name: "walking lunges", sets: 3, reps: 12, rest: 60 },
-			{ id: 15, name: "calf raises", sets: 4, reps: 15, rest: 45 },
+		day: "SATURDAY",
+		exercises: [
+			{ id: "romanian_deadlift", name: "romanian deadlift", sets: 3 },
+			{ id: "walking_lunges", name: "walking lunges", sets: 3 },
+			{ id: "calf_raises", name: "calf raises", sets: 4 },
 		],
 	},
 	{
-		id: "Sunday",
-		items: [
-			{ id: 16, name: "plank", sets: 3, reps: 30, rest: 30 },
-			{ id: 17, name: "crunches", sets: 3, reps: 20, rest: 30 },
-			{ id: 18, name: "leg raises", sets: 3, reps: 15, rest: 30 },
+		day: "SUNDAY",
+		exercises: [
+			{ id: "plank", name: "plank", sets: 3 },
+			{ id: "crunches", name: "crunches", sets: 3 },
+			{ id: "leg_raises", name: "leg raises", sets: 3 },
 		],
 	},
 ];

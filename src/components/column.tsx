@@ -1,12 +1,13 @@
 import { CollisionPriority } from "@dnd-kit/abstract";
 import { closestCenter } from "@dnd-kit/collision";
 import { useDroppable } from "@dnd-kit/react";
+import { useDailyPlan } from "@/store/hooks";
+import { Item } from "./item";
 
 interface ColumnProps {
-	children: React.ReactNode;
-	id: string;
+	id: DayOfWeek;
 }
-export function Column({ children, id }: ColumnProps) {
+export function Column({ id }: ColumnProps) {
 	const { ref } = useDroppable({
 		id,
 		type: "column",
@@ -15,12 +16,20 @@ export function Column({ children, id }: ColumnProps) {
 		collisionDetector: closestCenter,
 	});
 
+	const exercises = useDailyPlan(id);
+
 	return (
 		<div
 			className="rounded-lg border flex flex-1 flex-col items-center text-amber-100 p-3 gap-3"
 			ref={ref}
 		>
-			{children}
+			<h1>{id}</h1>
+
+			<div className="flex flex-col gap-2">
+				{exercises.map((exercise, index) => (
+					<Item key={id} column={id} index={index} {...exercise} />
+				))}
+			</div>
 		</div>
 	);
 }
